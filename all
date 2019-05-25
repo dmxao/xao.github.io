@@ -1,0 +1,9 @@
+数组与散列：
+数组：按下标排序，通过下标定位到某个元素。
+散列：无相对顺序，通过字符串值（键）来定位元素。
+
+springMVC运作流程：
+http://baijiahao.baidu.com/s?id=1599271835307699639&wfr=spider&for=pc
+
+strust运作流程：
+https://www.cnblogs.com/zhangxiangguo/p/6582414.html
