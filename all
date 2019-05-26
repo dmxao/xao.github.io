@@ -2,8 +2,30 @@
 数组：按下标排序，通过下标定位到某个元素。
 散列：无相对顺序，通过字符串值（键）来定位元素。
 
+session与cookie：
+https://www.cnblogs.com/andy-zhou/p/5360107.html
+session：保存于服务器端，客户端通过session id来匹配服务器端的session从而获得用户当前会话信息等。
+cookie：保存于客户端，可存于硬盘。通常用来保存session id 和保存用户登录信息（实现自动登录操作等）。
+
 springMVC运作流程：
 http://baijiahao.baidu.com/s?id=1599271835307699639&wfr=spider&for=pc
 
 strust运作流程：
+https://www.cnblogs.com/mfmdaoyou/p/7189578.html
+开发流程：
+1、配置strust.xml，将对应的action配置进去，其中：
+   （1）配置用户访问时url中的空间名，即 ".../work/xx.action" 中的work；
+   （2）配置url访问的action对应的类中的方法，即".../work/xx.action" 中的xx，一般与类中的方法名相同。
+   （3）配置返回结果，即<result></result>，返回结果即调用方法时返回的字符串，通过匹配返回结构，再返回前端对应的数据，常用的返回数据类型为 网页和json。
+2、书写对应的action类。
+3、在strust-plugin.xml中配置strust.xml。
 
+spring作用：
+1、管理strust和hibernate，通过ioc来控制这两框架运行时的一些耦合性，例如：service与action之间的耦合状态。
+2、通过aop进行事务管理。配置数据源，配置hibernate，配置事务触发的关键字，例如：<tx:method name="add*" propagation="REQUIRED"/>配置后，凡是以add开头的方法都将触发事务。
+
+hibernate开发流程：
+1、书写bo类
+2、配置 bo类名.hbm.xml
+3、配置 hibernate.cfg.xml,将第二部中的xml配置进去。
+注意：第三步中的配置文件名要与 datasource中配置的数据库连接名对应（项目引用）。
